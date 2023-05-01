@@ -1,6 +1,7 @@
 import React from 'react';
 import post from "../assets/post.jpg";
 import {Button} from "react-bootstrap";
+import {ADMIN_ROUTE} from "../utils/consts.js";
 
 const HomePost = () => {
     return (
@@ -19,7 +20,7 @@ const HomePost = () => {
         }}>
             <h2 style={{fontSize: 25}}>Trends</h2>
             <p style={{fontSize: 40}}>Why you should discover Georgia as place to live</p>
-            <Button onClick={()=> window.open({}, "_blank")} variant="outline-primary">Primary</Button>
+            <Button style={{borderRadius:'50px'}} variant={"outline-light"} onClick={() => navigate(ADMIN_ROUTE)}>Read</Button>
         </div>
     );
 };

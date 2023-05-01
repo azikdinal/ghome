@@ -16,6 +16,7 @@ const Home = () => {
             <CardList/>
             <CardList/>
             <HomePost/>
+            <CardList/>
         </div>
     );
 };

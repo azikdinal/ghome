@@ -23,7 +23,7 @@ const NavBar = () => {
     return (
         <Navbar bg="dark" variant="dark" className='d-flex justify-content-sm-between'>
             <div className='justify-content-sm-between d-flex align-items-center me-auto ms-auto'>
-                <Navbar.Brand href={HOME_ROUTE} style={{display:"flex"}} >
+                <Navbar.Brand href={HOME_ROUTE} style={{display: "flex"}}>
                     <img src={logo} height='25' alt=""/>
                 </Navbar.Brand>
                 <Nav style={{gap: window.innerWidth * 0.02}} className="align-items-center">
@@ -41,7 +41,14 @@ const NavBar = () => {
                         :
 
                         <Nav className='ms-4'>
-                            <Button style={{borderRadius:'50px'}} variant={"outline-light"} onClick={() => navigate(ADMIN_ROUTE)}>
+                            <Button style={{
+                                borderRadius: '50px',
+                                marginRight: 10
+                            }} variant={"outline-light"} onClick={() => navigate(ADMIN_ROUTE)}>
+                                Log in
+                            </Button>
+                            <Button style={{borderRadius: '50px'}} variant={"outline-light"}
+                                    onClick={() => navigate(ADMIN_ROUTE)}>
                                 Sign up
                             </Button>
                         </Nav>
