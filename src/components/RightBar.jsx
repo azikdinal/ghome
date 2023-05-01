@@ -5,6 +5,8 @@ const RightBar = () => {
     return (
         <div >
             <Card/>
+            <Card/>
+            <Card/>
         </div>
     );
 };

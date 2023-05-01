@@ -8,9 +8,9 @@ const Article = () => {
     const text = `  The Republic of Georgia, located in the Caucasus region of Eurasia, is a country with a rich cultural heritage and breathtaking natural beauty. From the snow-capped peaks of the Caucasus Mountains to the lush vineyards of the Kakheti region, Georgia is a land of stunning contrasts and diversity. One of the most notable features of Georgia is its cuisine, which is renowned for its bold flavors, fresh ingredients, and unique combinations of spices and herbs. Traditional Georgian dishes include khinkali (dumplings filled with meat, spices, and vegetables), khachapuri (cheese-filled bread), and shashlik (grilled skewered meats). Georgia is also known for its wine, with a winemaking tradition that dates back over 8,000 years. The country produces a wide range of wines, from dry and full-bodied reds to light and crisp whites, and many visitors to Georgia enjoy taking wine tours and tastings. In addition to its culinary delights, Georgia is also home to many historic sites and cultural landmarks. The capital city of Tbilisi, with its winding streets, colorful architecture, and hot sulfur baths, is a popular destination for visitors, as is the ancient city of Mtskheta, a UNESCO World Heritage site and former capital of the Kingdom of Georgia. For outdoor enthusiasts, Georgia offers a wealth of natural wonders, including the stunning Gergeti Trinity Church, perched atop a mountain in the town of Kazbegi, and the lush, green valleys of Svaneti, a remote region of the country known for its hiking and trekking trails. Whether you're interested in exploring Georgia's rich history and culture, sampling its delicious cuisine, or immersing yourself in its natural wonders, there's something for everyone in this fascinating and diverse country.`
     return (
         <article style={{
-            width:720
+            width: 720
         }}>
-            <div>
+            <div className='bg-info p-5 mb-5'>
                 <h5>Charls Bukovski</h5>
                 <h3>Why should you live in Georgia</h3>
                 <div style={{
@@ -44,13 +44,14 @@ const Article = () => {
                 </div>
                 <div>{text}
                 </div>
-                <div>
+                <div className='mt-4'>
                     <Button style={{borderRadius: '50px'}} variant={"outline-dark"}
                             onClick={() => navigate(ADMIN_ROUTE)}>
                         Read more
                     </Button>
                 </div>
                 <div style={{
+                    marginTop:8,
                     display: "flex",
                     alignItems: "center"
                 }}>
