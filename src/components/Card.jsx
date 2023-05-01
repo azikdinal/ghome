@@ -5,13 +5,13 @@ import apart from "../assets/apart1.png";
 const Card = () => {
     return (
         <div>
-            <a style={{
-                position: "absolute",
-                top:0,
-                left:0,
-                width:"100%",
-                height:"100%"
-            }} href={APARTMENT_ROUTE}></a>
+            {/*<a style={{*/}
+            {/*    position: "absolute",*/}
+            {/*    top:0,*/}
+            {/*    left:0,*/}
+            {/*    width:"100%",*/}
+            {/*    height:"100%"*/}
+            {/*}} href={APARTMENT_ROUTE}></a>*/}
             <div>
                 <img src={apart} height='200px' alt=""/>
             </div>
