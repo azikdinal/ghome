@@ -1,9 +1,16 @@
 import React from 'react';
+import Article from "../components/Article.jsx";
+import RightBar from "../components/RightBar.jsx";
 
 const Blog = () => {
     return (
-        <div>
-            Blog
+        <div style={{
+            maxWidth: 1280,
+            margin:"40px auto 0 auto",
+            padding: 10
+        }}>
+            <Article/>
+            <RightBar/>
         </div>
     );
 };
