@@ -6,18 +6,16 @@ const sequelize = require('./db')
 
 
 
-
-
 const PORT = process.env.PORT || 5000
 const app = express()
 app.use(cors())
 app.use(express.json())
+
+app.get('/',(req,res) => res.json({message:"dsfs"}))
 const start = async () =>{
     try{
         await sequelize.authenticate()
         await sequelize.sync()
-
-
         app.listen(PORT, () => {
             console.log(`Server started on ${PORT}`)
         })
