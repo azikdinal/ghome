@@ -5,14 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="24464f94-3b45-4220-820d-08f299affed5" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/server/conttrollers/userController.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/error/ApiError.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/middleware/authMiddleware.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/routers/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/routers/userRouter.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/.env" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/http/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/.env" beforeDir="false" afterPath="$PROJECT_DIR$/server/.env" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/.eslintrc.cjs" beforeDir="false" afterPath="$PROJECT_DIR$/client/.eslintrc.cjs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/bootstrap.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/bootstrap.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/client/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/client/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/App.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/App.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/main.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/routers/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/routers/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,6 +66,7 @@
       <recent name="C:\Users\HomePC\Desktop\ghome\src\assets" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\HomePC\Desktop\ghome\client\src" />
       <recent name="C:\Users\HomePC\Desktop\ghome\client" />
       <recent name="C:\Users\HomePC\Desktop\ghome\src" />
     </key>
@@ -79,7 +83,7 @@
       <workItem from="1682842717990" duration="12177000" />
       <workItem from="1682963035883" duration="10435000" />
       <workItem from="1682978289428" duration="2745000" />
-      <workItem from="1683046123581" duration="3159000" />
+      <workItem from="1683046123581" duration="4894000" />
     </task>
     <servers />
   </component>
