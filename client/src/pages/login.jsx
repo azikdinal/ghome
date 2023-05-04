@@ -1,13 +1,13 @@
 import React, {useState} from 'react';
 import {Modal, Button, Form} from 'react-bootstrap';
-import {ADMIN_ROUTE} from "../utils/consts.js";
-
 const Login = () => {
 
     const [show, setShow] = useState(false);
 
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
+
+
 
     return (
         <>
@@ -30,7 +30,7 @@ const Login = () => {
                 </Modal.Body>
                 <Modal.Footer style={{width: 400, margin: '0 auto'}}>
                     <Button style={{borderColor: 'red', borderRadius: 20, width: "100%", backgroundColor: 'red'}}
-                            variant="secondary" onClick={handleClose}>
+                            variant="secondary" onClick={handleShow}>
                         Continue
                     </Button>
                     <Button style={{
