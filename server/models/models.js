@@ -7,6 +7,15 @@ const User = sequelize.define('user', {
     password: {type: DataTypes.STRING,},
     role: {type: DataTypes.STRING, defaultValue: "USER"}
 })
+
+const Article = sequelize.define('article', {
+    id: {type: DataTypes.INTEGER, autoIncrement: true, primaryKey: true},
+    title: {type: DataTypes.STRING, unique: true},
+    body: {type: DataTypes.STRING},
+    readTime: {type: DataTypes.INTEGER, defaultValue: 0},
+    views: {type: DataTypes.INTEGER, defaultValue: 0}
+})
+
 const Property = sequelize.define('property', {
     id: {type: DataTypes.INTEGER, autoIncrement: true, primaryKey: true},
     title: {type: DataTypes.STRING, allowNull: false},
@@ -19,7 +28,7 @@ const Property = sequelize.define('property', {
     year: {type: DataTypes.INTEGER},
 })
 
-module.exports = {User, Property}
+module.exports = {User, Property, Article}
 
 User.hasMany(Property)
 Property.belongsTo(User)

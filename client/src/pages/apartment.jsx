@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import axios from "axios";
 import p1 from '../assets/apart/p1.png'
 import p2 from '../assets/apart/p2.png'
@@ -14,16 +14,33 @@ import compass from '../assets/compass.png'
 
 const Apartment = () => {
     const [price, setPrice] = useState(0)
-    const [rating, setRating] = useState(0)
     const [bath, setBath] = useState(0)
     const [sqft, setSqft] = useState(0)
-    const [type, setType] = useState(0)
-    const [address, setAddress] = useState(0)
+    const [type, setType] = useState('')
+    const [address, setAddress] = useState('')
     const [year, setYear] = useState(0)
 
-    axios.get(import.meta.env.VITE_API_URL + '/api/property/1',).then((res) => {
-        setPrice(res.data.price)
-    })
+
+    useEffect(() => {
+        axios.get(import.meta.env.VITE_API_URL + '/api/property/1',).then((res) => {
+            setPrice(res.data.price)
+        })
+        axios.get(import.meta.env.VITE_API_URL + '/api/property/1',).then((res) => {
+            setBath(res.data.bath)
+        })
+        axios.get(import.meta.env.VITE_API_URL + '/api/property/1',).then((res) => {
+            setSqft(res.data.sqft)
+        })
+        axios.get(import.meta.env.VITE_API_URL + '/api/property/1',).then((res) => {
+            setType(res.data.type)
+        })
+        axios.get(import.meta.env.VITE_API_URL + '/api/property/1',).then((res) => {
+            setAddress(res.data.address)
+        })
+        axios.get(import.meta.env.VITE_API_URL + '/api/property/1',).then((res) => {
+            setYear(res.data.year)
+        })
+    }, [])
 
 
     return (
@@ -65,15 +82,15 @@ const Apartment = () => {
                 </div>
                 <div className='d-flex gap-4'>
                     <h3>{price}</h3>
-                    <b>Est. <a href="">$4,875/mo</a></b>
+                    <b>Est. <a href="">{price / 20}</a></b>
                 </div>
                 <ul className='d-flex list-unstyled'>
                     <li className='me-1'><span style={{marginRight: 3, fontSize: 'inherit', fontWeight: 700}}>5</span>bed
                     </li>
-                    <li className='me-1'><span style={{marginRight: 3, fontSize: 'inherit', fontWeight: 700}}>3</span>bath
+                    <li className='me-1'><span style={{marginRight: 3, fontSize: 'inherit', fontWeight: 700}}>{bath}</span>bath
                     </li>
                     <li className='me-1'><span
-                        style={{marginRight: 3, fontSize: 'inherit', fontWeight: 700}}>1,657</span>sqft
+                        style={{marginRight: 3, fontSize: 'inherit', fontWeight: 700}}>{sqft}</span>sqft
                     </li>
                     <li className='me-1'><span
                         style={{marginRight: 3, fontSize: 'inherit', fontWeight: 700}}>3,158</span>sqft
