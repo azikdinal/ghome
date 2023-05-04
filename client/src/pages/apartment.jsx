@@ -4,6 +4,13 @@ import p1 from '../assets/apart/p1.png'
 import p2 from '../assets/apart/p2.png'
 import p3 from '../assets/apart/p3.png'
 import p4 from '../assets/apart/p4.png'
+import CardList from "../components/CardList.jsx";
+import {Button} from "react-bootstrap";
+import calendar from '../assets/calendar.png'
+import hummer from '../assets/hummer.png'
+import linear from '../assets/linear.png'
+import house from '../assets/house.png'
+import compass from '../assets/compass.png'
 
 const Apartment = () => {
     const [message, setMessage] = useState('')
@@ -38,7 +45,8 @@ const Apartment = () => {
                 </div>
             </div>
             <div style={{height: 50, width: '100%'}}></div>
-            <div className='d-flex align-items-center'>
+            <div style={{width: 720}}>
+                <div className='d-flex align-items-center'>
                         <span style={{
                             backgroundColor: "red",
                             borderRadius: 4,
@@ -46,18 +54,99 @@ const Apartment = () => {
                             height: 12,
                             marginRight: 4
                         }}></span>
-                <div>For sale</div>
+                    <div>For sale</div>
+                </div>
+                <div className='d-flex gap-4'>
+                    <h3>$1,876,567</h3>
+                    <b>Est. <a href="">$4,875/mo</a></b>
+                </div>
+                <ul className='d-flex list-unstyled'>
+                    <li className='me-1'><span style={{marginRight: 3, fontSize: 'inherit', fontWeight: 700}}>5</span>bed
+                    </li>
+                    <li className='me-1'><span style={{marginRight: 3, fontSize: 'inherit', fontWeight: 700}}>3</span>bath
+                    </li>
+                    <li className='me-1'><span
+                        style={{marginRight: 3, fontSize: 'inherit', fontWeight: 700}}>1,657</span>sqft
+                    </li>
+                    <li className='me-1'><span
+                        style={{marginRight: 3, fontSize: 'inherit', fontWeight: 700}}>3,158</span>sqft
+                        lot
+                    </li>
+                </ul>
+
+                <div>11 Manor Dr, San Francisco, CA 94127</div>
+                <div>
+                    <ul style={{
+                        display: 'grid',
+                        listStyle: 'none',
+                        gridTemplateColumns: 'minmax(50%, max-content) minmax(max-content, 1fr)'
+                    }}>
+                        <li><img src={house} alt=""/>
+                            <div>
+                                <div>Single family</div>
+                                <div>Property type</div>
+                            </div>
+                        </li>
+                        <li><img src={calendar} alt=""/>
+                            <div>
+                                <div>14 Hours</div>
+                                <div>Time on Realtor.com</div>
+                            </div>
+                        </li>
+                        <li><img src={linear} alt=""/>
+                            <div>
+                                <div>$898</div>
+                                <div>Price per sqft</div>
+                            </div>
+                        </li>
+                        <li><img src={hummer} alt=""/>
+                            <div>
+                                <div>1930</div>
+                                <div>Year built</div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div className='mb-4 mt-4 d-flex gap-5'>
+                    <Button variant="outline-primary">Ask a question</Button>
+                    <Button variant="outline-primary">Share this home</Button>
+                </div>
+                <div style={{display: "grid", gridTemplateColumns: '1fr 1fr'}}>
+                    <div className='d-flex'>
+                        <div className='me-3'><img src={compass} alt=""/></div>
+                        <div>
+                            <div>Presented by:</div>
+                            <div><a href="">Anna Lew</a></div>
+                            <ul className='list-unstyled'>
+                                <li>Brokered by:</li>
+                                <li>COMPASS</li>
+                                <li><a href="">(415) 660-9955</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div>
+                        <div>
+                            <div>Data Source:</div>
+                            <div>SanFrancisco</div>
+                        </div>
+                        <hr/>
+                        <div>
+                            <div>Source's Property ID:</div>
+                            <div>423738788</div>
+                        </div>
+                        <hr/>
+
+                        <div>
+                            <div>Data Source Copyright:</div>
+                            <div>
+                                ©2023 San Francisco Association of REALTORS®. All rights reserved.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <CardList/>
+                <CardList/>
             </div>
-            <div className='d-flex gap-4'>
-                <h3>$1,876,567</h3>
-                <b>Est. <a href="">$4,875/mo</a></b>
-            </div>
-            <ul className='d-flex'>
-                <li><span style={{fontSize:'inherit', listStyleType:'none', fontWeight:700}}>5</span>bed</li>
-                <li><span>3</span>bath</li>
-                <li><span>1,657</span>sqft</li>
-                <li><span>3,158</span>sqft lot</li>
-            </ul>
         </div>
     );
 };
