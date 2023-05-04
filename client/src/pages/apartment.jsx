@@ -13,15 +13,21 @@ import house from '../assets/house.png'
 import compass from '../assets/compass.png'
 
 const Apartment = () => {
-    const [message, setMessage] = useState('')
+    const [price, setPrice] = useState(0)
+    const [rating, setRating] = useState(0)
+    const [bath, setBath] = useState(0)
+    const [sqft, setSqft] = useState(0)
+    const [type, setType] = useState(0)
+    const [address, setAddress] = useState(0)
+    const [year, setYear] = useState(0)
 
-    axios.get(import.meta.env.VITE_API_URL + '/api/mess/message',).then((res) => {
-        setMessage(res.data.message)
+    axios.get(import.meta.env.VITE_API_URL + '/api/property/1',).then((res) => {
+        setPrice(res.data.price)
     })
 
 
     return (
-        <div style={{maxWidth: 1280, margin: '0 auto'}}>
+        <div style={{maxWidth: 1280, margin: '50px auto 0 auto'}}>
             <div className='d-flex flex-column'>
                 <div>Presented by: <a href="">Anna Lew</a></div>
                 <div>Brokered by: <b>COMPASS</b></div>
@@ -44,6 +50,7 @@ const Apartment = () => {
                     </picture>
                 </div>
             </div>
+            {/*Attributes*/}
             <div style={{height: 50, width: '100%'}}></div>
             <div style={{width: 720}}>
                 <div className='d-flex align-items-center'>
@@ -57,7 +64,7 @@ const Apartment = () => {
                     <div>For sale</div>
                 </div>
                 <div className='d-flex gap-4'>
-                    <h3>$1,876,567</h3>
+                    <h3>{price}</h3>
                     <b>Est. <a href="">$4,875/mo</a></b>
                 </div>
                 <ul className='d-flex list-unstyled'>
@@ -111,6 +118,7 @@ const Apartment = () => {
                     <Button variant="outline-primary">Ask a question</Button>
                     <Button variant="outline-primary">Share this home</Button>
                 </div>
+                {/*Company*/}
                 <div style={{display: "grid", gridTemplateColumns: '1fr 1fr'}}>
                     <div className='d-flex'>
                         <div className='me-3'><img src={compass} alt=""/></div>
@@ -147,6 +155,8 @@ const Apartment = () => {
                 <CardList/>
                 <CardList/>
             </div>
+
+
         </div>
     );
 };

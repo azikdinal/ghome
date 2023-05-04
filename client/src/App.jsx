@@ -5,8 +5,6 @@ import axios from "axios";
 
 function App() {
 
-
-
     return (
         <BrowserRouter>
             <NavBar/>
