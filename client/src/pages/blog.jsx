@@ -4,13 +4,7 @@ import RightBar from "../components/RightBar.jsx";
 import axios from "axios";
 
 const Blog = () => {
-    const [article, setArticle] = useState('')
-    useEffect(() => {
-        axios.get(import.meta.env.VITE_API_URL + '/api/blog').then((res) => {
-                setArticle(res.body)
-            }
-        )
-    }, [])
+
 
     return (
         <div style={{
