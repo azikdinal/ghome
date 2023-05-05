@@ -4,7 +4,7 @@ import {
     ABOUT_ROUTE,
     ADMIN_ROUTE, APARTMENT_ROUTE,
     BLOG_ROUTE, COMPANIES_ROUTE, HOME_ROUTE,
-    LOGIN_ROUTE, PROFILE_ROUTE,
+    LOGIN_ROUTE, PROFILE_ROUTE, PROPERTIES_ROUTE,
     SERVICES_ROUTE, SIGN_ROUTE
 } from "./utils/consts.js";
 import Login from "./pages/login.jsx";
@@ -12,7 +12,7 @@ import sign from "./pages/sign.jsx";
 import blog from "./pages/blog.jsx";
 import about from "./pages/about.jsx";
 import services from "./pages/services.jsx";
-import properties from "./pages/companies.jsx";
+import properties from "./pages/properties.jsx";
 import home from "./pages/home.jsx";
 import Profile from "./pages/profile.jsx";
 import apartment from "./pages/apartment.jsx";
@@ -51,16 +51,17 @@ export const publicRoutes = [
         Component: services
     },
     {
-        path: COMPANIES_ROUTE,
-        Component: properties
-    },
-    {
         path: HOME_ROUTE,
         Component: home
     },
     {
         path: APARTMENT_ROUTE,
         Component: apartment
+    },
+
+    {
+        path: PROPERTIES_ROUTE,
+        Component: properties
     },
 
 ]

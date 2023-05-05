@@ -2,13 +2,12 @@ import React, {useContext, useState} from 'react';
 import {Button, Modal, Nav, Navbar} from "react-bootstrap";
 import logo from '../assets/logo.png'
 import {
-    ABOUT_ROUTE,
-    ADMIN_ROUTE,
     BLOG_ROUTE,
     COMPANIES_ROUTE,
     HOME_ROUTE,
     PROFILE_ROUTE,
-    SERVICES_ROUTE, SIGN_ROUTE,
+    SERVICES_ROUTE,
+    PROPERTIES_ROUTE
 
 } from "../utils/consts.js";
 import {useNavigate} from "react-router-dom";
@@ -34,6 +33,7 @@ const NavBar = () => {
                     <Nav.Link href={COMPANIES_ROUTE}>Companies</Nav.Link>
                     <Nav.Link href={SERVICES_ROUTE}>Services</Nav.Link>
                     <Nav.Link href={BLOG_ROUTE}>Blog</Nav.Link>
+                    <Nav.Link href={PROPERTIES_ROUTE}>Properties</Nav.Link>
 
                     {isAuth ?
                         <Nav className='ms-4'>
